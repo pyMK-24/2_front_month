@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    @include container;
+    &-title {
+        h1 {
+            @include container-title-h1;
+        }
+        p {
+            @include container-title-p;
+        }
+    }
+    .container-items {
+        @include container;
+        margin-top: 64px;
+        .item {
+            width: 768px;
+            margin: 0 auto;
+            margin-bottom: 32px;
+            input {
+                display: none;
+            }
+            label {
+                // @include flex-center-ev;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+                text-align: left;
+            }
+            label::after {
+                // content: "+";
+                content: url("../img/icon.svg");
+            }
+            input:checked + label::after {
+                // content: "–";
+                content: url("../img/minus-circle.svg");
+            }
+            .content {
+                display: none;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $text-p;
+                margin-left: auto;
+                margin-right: 48px;
+                text-align: left;
+            }
+            input:checked ~ .content {
+                display: block;
+            }
+
+        }
+        
+    }
+}
+@include responsive($breakpoint-tablet) {
+    .container {
+        max-width: 1120px;
+        width: 100%;
+        margin: 0 auto;
+        // &-title {
+        //     width: 1120px;
+        //     margin: 0 auto;
+        // }
+        .container-items {
+            max-width: 1120px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+@include responsive($breakpoint-mobile) {
+    .container {
+        max-width: 300px;
+        &-title {
+            margin: 0 auto;
+            h1 {
+                font-size: 30px;
+                line-height: 38px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+        .container-items {
+            max-width: 300px;
+            margin-top: 32px;
+            .item {
+                max-width: 300px;
+            }
+        }
+    }
+}
