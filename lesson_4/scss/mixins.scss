@@ -1,0 +1,63 @@
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+@mixin flex-center-ev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin container {
+    max-width: var(--container-max-width);
+    max-height: var(--container-max-hight);
+    margin-top: 96px;
+    margin-bottom: 96px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "PT Sans", "Arial", sans-serif;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+@mixin container-title-h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 44px;
+}
+
+@mixin container-label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: auto;
+    margin-bottom: 6px;
+}
+
+@mixin container-title-p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $text-p;
+}
+
+@mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin custom-btn($bg: $btn-bg, $border: $btn-border, $radius: var(--radius)) {
+    background-color: $bg;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 4px 12px;
+    box-sizing: border-box;
+}
