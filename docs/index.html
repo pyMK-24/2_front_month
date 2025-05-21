@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-img">
+            <img src="img/Img-form.webp" alt="img-form">
+        </div>
+        <div class="container-inner">
+            <div class="container-form">
+                <form action="/submit-request" method="post">
+                    <h1>Leave a request</h1>
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder=" Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Your password" required>
+                    </div>
+
+                    <div class="form-group-genders">
+                        <label>Gender</label>
+                        <div class="gender-options">
+                            <label>
+                                <input type="radio" id="female" name="gender" value="female" required> Woman
+                            </label>
+                            <label>
+                                <input type="radio" id="man" name="gender" value="man"> Man
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group-file">
+                        <label for="file">Select file</label>
+                        <input type="file" id="file" name="file" placeholder="Select file" required>
+                    </div>
+
+                    <div class="form-group-agree">
+                        <label>
+                            <input type="checkbox" id="agree" name="agree" value="agree" required>
+                            You agree to our friendly&nbsp 
+                            <a href="">privacy policy.</a>
+                        </label>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
